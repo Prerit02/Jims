@@ -1,0 +1,5 @@
+import random
+choice = input("Do you want to roll the dice(Y/N): ")
+while choice == 'Y':
+    print("The number appeared on the dice after rolling the dice is:",random.randint(1,6))
+    choice = input("Do you want to roll the dice again?(Y/N): ")
