@@ -1,0 +1,10 @@
+# 101 Hack 51
+# Fair Cake Cutting Problem
+import sys
+def howManyToInvite(A, B, a):
+    return int(a/(A/B))
+
+A, B, a = input().strip().split(' ')
+A, B, a = [int(A), int(B), int(a)]
+b = howManyToInvite(A, B, a)
+print(b)
