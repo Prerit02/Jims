@@ -1,0 +1,18 @@
+def wrap(s, w):
+    s1 = len(s)
+    a= ""
+    list1 = []
+    while s1 >= 0:
+        if len(s) < w:
+            for j in range(len(s)):
+                a = a+s[j]
+        else:
+            for i in range(w):
+                a = a+s[i]
+    
+        list1.append(a)
+    #print(a)
+        a = ""
+        s1 = s1-w
+        s = s[w:]
+    return "\n".join(list1)
