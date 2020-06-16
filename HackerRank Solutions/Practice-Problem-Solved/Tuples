@@ -1,0 +1,9 @@
+a = int(input())
+str1 = input()
+list1 = str1.split(" ")
+list2 = []
+if a == len(list1):
+    for i in range(len(list1)):
+        list2.append(int(list1[i]))
+    tup = tuple(list2)
+    print(hash(tup))
