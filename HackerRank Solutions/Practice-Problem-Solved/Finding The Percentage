@@ -1,0 +1,11 @@
+a = int(input())
+list1 = []
+str1 = []
+list2 = []
+for i in range(a):
+    str1 = input().split(" ")
+    list1.append(str1[0])
+    list2.append((float(str1[1])+float(str1[2])+float(str1[3]))/3)
+b = input()
+c = list1.index(b)
+print("%.2f" %list2[c])
