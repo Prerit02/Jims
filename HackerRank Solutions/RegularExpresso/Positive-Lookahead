@@ -1,0 +1,7 @@
+# Regular Expresso
+# Positive Lookahead Problem
+import re
+string = input()
+pattern = re.compile(r'o(?=o(?=o))')
+match = re.findall(pattern,string)
+print(len(match))
