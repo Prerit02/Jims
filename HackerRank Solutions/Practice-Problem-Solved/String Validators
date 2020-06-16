@@ -1,0 +1,23 @@
+a = input()
+isalphanum = 0
+isalpha = 0
+isdigit = 0
+islowercase = 0
+isuppercase = 0
+
+for i in range(len(a)):
+    if a[i].isalnum():
+        isalphanum += 1
+    if a[i].isalpha():
+        isalpha += 1
+    if a[i].isdigit():
+        isdigit += 1
+    if a[i].islower():
+        islowercase += 1
+    if a[i].isupper():
+        isuppercase += 1
+print(isalphanum>0)
+print(isalpha>0)
+print(isdigit>0)
+print(islowercase>0)
+print(isuppercase>0)
