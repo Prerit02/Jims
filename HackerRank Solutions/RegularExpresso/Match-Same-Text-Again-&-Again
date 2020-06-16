@@ -1,0 +1,10 @@
+# Regular Expresso
+# Matching Same Text Again & Again Problem
+import re
+string = input()
+pattern1 = re.compile(r'^([a-z])(\w)(\s)(\W)(\d)(\D)([A-Z])([A-Za-z])([aeiouAEIOU])(\S)\1\2\3\4\5\6\7\8\9\10$')
+pattern2 = re.compile(r'^([a-z]\w\s\W\d\D[A-Z][a-zA-Z][aeiouAEIOU]\S)\1$')
+match1 = bool(re.search(pattern1,string))
+match2 = bool(re.search(pattern2,string))
+print(match1)
+print(match2)
