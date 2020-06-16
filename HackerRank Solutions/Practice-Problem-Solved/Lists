@@ -1,0 +1,21 @@
+a = int(input())
+str1 = []
+str2 = []
+length = 0
+for i in range(a):
+    a = input()
+    str1 = a.split(" ")
+    if str1[0] == "insert":
+        str2.insert(int(str1[1]),int(str1[2]))
+    elif str1[0] == "print":
+        print(str2)
+    elif str1[0] == "remove":
+        str2.remove(int(str1[1]))
+    elif str1[0] == "append":
+        str2.append(int(str1[1]))
+    elif str1[0] == "sort":
+        str2.sort()
+    elif str1[0] == "pop":
+        str2.pop()
+    elif str1[0] == "reverse":
+        str2.reverse()
