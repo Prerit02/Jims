@@ -1,0 +1,50 @@
+# Regular Expresso
+# Matching Specific String
+import re
+string = input()
+pattern = re.compile(r'hackerrank')
+match = re.findall(pattern,string)
+print("Number of matches:",len(match))
+
+# Regular Expresso
+# Vowels in the Back Problem
+import re
+string = input()
+pattern = re.compile(r'[aeiouy]{1}[a-z]{9}$')
+match = bool(re.search(pattern,string))
+print(match)
+
+# Regular Expresso
+# Positive Lookahead Problem
+import re
+string = input()
+pattern = re.compile(r'o(?=o(?=o))')
+match = re.findall(pattern,string)
+print(len(match))
+
+# Regular Expresso
+# Matching Same Text Again & Again Problem
+import re
+string = input()
+pattern1 = re.compile(r'^([a-z])(\w)(\s)(\W)(\d)(\D)([A-Z])([A-Za-z])([aeiouAEIOU])(\S)\1\2\3\4\5\6\7\8\9\10$')
+pattern2 = re.compile(r'^([a-z]\w\s\W\d\D[A-Z][a-zA-Z][aeiouAEIOU]\S)\1$')
+match1 = bool(re.search(pattern1,string))
+match2 = bool(re.search(pattern2,string))
+print(match1)
+print(match2)
+
+# Regular Expresso
+# Balanced Strings Problem
+Will post soon
+
+# Regular Expresso
+# Match Maker Problem
+Will post soon
+
+# Regular Expresso
+# Winning Tic-Tac-Toe Problem
+Will post soon
+
+# Regular Expresso
+# Restricted Repititions Problem
+Will post soon
