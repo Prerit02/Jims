@@ -1,0 +1,16 @@
+# HourRank 27
+# Impressing the Boss Problem
+import numpy as np
+t = int(input())
+for i in range(t):
+    n = int(input())
+    l1 = list(map(int,input().split(" ")))
+    arr1 = np.array(l1)
+    l1.sort()
+    arr2 = np.array(l1)
+    arr3 = np.where(arr1==arr2,0,-1)
+    l2 = arr3.tolist()
+    if l2.count(-1)//2 == 1:
+        print("YES")
+    else:
+        print("NO")
