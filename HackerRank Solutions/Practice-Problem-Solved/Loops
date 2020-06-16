@@ -1,0 +1,5 @@
+i = 0
+a = int(input())
+while i<a:
+    print(i*i)
+    i = i+1
