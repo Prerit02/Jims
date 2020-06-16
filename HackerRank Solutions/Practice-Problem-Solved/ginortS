@@ -1,0 +1,7 @@
+a = input()
+l1 = list(a)
+l2 = ''.join(sorted([i for i in l1 if str(i).isalpha() and str(i).islower()]))
+l3 = ''.join(sorted([i for i in l1 if str(i).isalpha() and str(i).isupper()]))
+odd = ''.join(sorted([i for i in l1 if str(i).isdigit() and int(i)%2 != 0]))
+even = ''.join(sorted([i for i in l1 if str(i).isdigit() and int(i)%2 == 0]))
+print(l2+l3+odd+even)
