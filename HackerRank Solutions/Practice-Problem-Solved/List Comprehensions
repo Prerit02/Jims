@@ -1,0 +1,17 @@
+X = int(input())
+Y = int(input())
+Z = int(input())
+target1 = int(input())
+target2 = target1
+A = []
+temp_list = []
+for i in range(X+1):
+    for j in range(Y+1):
+        for k in range(Z+1):
+            if i+j+k != target2:
+                temp_list.append(i)
+                temp_list.append(j)
+                temp_list.append(k)
+                A.append(temp_list)
+                temp_list = []
+print(A)
