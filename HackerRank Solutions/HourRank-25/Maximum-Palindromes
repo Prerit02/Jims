@@ -1,0 +1,28 @@
+# HourRank 25
+# Maximum Palindromes Problem
+import itertools
+def is_palindrome(s):
+    if s == s[::-1]:
+        return True
+    else:
+        return False
+def combinations(s):
+    a = len(s)
+    l1 = list(s)
+    final = []
+    final1 = 0
+    for i in range(2,a+1):
+        l2 = itertools.permutations(l1,i)
+        l2 = set(list(l2))
+        final.extend([len(''.join(i)) for i in l2 if is_palindrome(''.join(i))])
+    final1 = final.count(max(final))
+    return final1
+string = input()
+q = int(input("Enter the number of days: "))
+listx=[]
+for i in range(q):
+    l,r = map(int,input().split(" "))
+    l,r = l-1,r
+    listx.append(combinations(string[l:r]))
+for i in range(q):
+    print(listx[i])
