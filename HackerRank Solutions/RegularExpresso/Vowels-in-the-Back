@@ -1,0 +1,7 @@
+# Regular Expresso
+# Vowels in the Back Problem
+import re
+string = input()
+pattern = re.compile(r'[aeiouy]{1}[a-z]{9}$')
+match = bool(re.search(pattern,string))
+print(match)
