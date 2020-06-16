@@ -1,0 +1,7 @@
+# Regular Expresso
+# Matching Specific String
+import re
+string = input()
+pattern = re.compile(r'hackerrank')
+match = re.findall(pattern,string)
+print("Number of matches:",len(match))
