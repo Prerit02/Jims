@@ -1,0 +1,66 @@
+# HourRank 25
+# Constructing a Number Problem
+t = int(input("Enter the numbe rof queries you want to run: "))
+for i in range(t):
+    n = int(input())
+    l = list(map(int,input().rstrip().split(' ')))
+    l = ''.join(str(e) for e in l)
+    l = list(map(int,l))
+    if(sum(l)%3==0):
+        print("Yes")
+    else:
+        print("No")
+
+
+# HourRank 25
+# Maximum Palindromes Problem
+import itertools
+def is_palindrome(s):
+    if s == s[::-1]:
+        return True
+    else:
+        return False
+def combinations(s):
+    a = len(s)
+    l1 = list(s)
+    final = []
+    final1 = 0
+    for i in range(2,a+1):
+        l2 = itertools.permutations(l1,i)
+        l2 = set(list(l2))
+        final.extend([len(''.join(i)) for i in l2 if is_palindrome(''.join(i))])
+    final1 = final.count(max(final))
+    return final1
+string = input()
+q = int(input("Enter the number of days: "))
+listx=[]
+for i in range(q):
+    l,r = map(int,input().split(" "))
+    l,r = l-1,r
+    listx.append(combinations(string[l:r]))
+for i in range(q):
+    print(listx[i])
+    
+
+# HourRank 25
+# The Strange Function Problem
+import sys
+from math import gcd
+from functools import reduce
+
+def find_gcd(l1):
+    x = reduce(gcd,l1)
+    return x
+n = int(input())
+l1 = list(map(int,input().split(" ")))
+list1 = []
+def function(l,r):
+    listx = l1[l-1:r]
+    summ = sum(listx)
+    gcdd = find_gcd(listx)
+    maxx = max(listx)
+    return gcdd*(summ-maxx)
+for l in range(1,n+1):
+    for r in range(l,n+1):
+        list1.append(function(l,r))
+print(max(list1))
