@@ -1,0 +1,12 @@
+# HourRank 25
+# Constructing a Number Problem
+t = int(input("Enter the numbe rof queries you want to run: "))
+for i in range(t):
+    n = int(input())
+    l = list(map(int,input().rstrip().split(' ')))
+    l = ''.join(str(e) for e in l)
+    l = list(map(int,l))
+    if(sum(l)%3==0):
+        print("Yes")
+    else:
+        print("No")
