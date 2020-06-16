@@ -1,0 +1,13 @@
+import re
+a = int(input())
+list1 = []
+list2 = []
+for i in range(a):
+    list1.append(input())
+for i in list1:
+    list2.append(bool(re.search('^[789]{1}\d{9}$',i)))
+for i in list2:
+    if i == False:
+        print("NO")
+    elif i == True:
+        print("YES")
