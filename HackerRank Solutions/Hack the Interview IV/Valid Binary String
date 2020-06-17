@@ -1,0 +1,9 @@
+a = input("Enter a binary string: ")
+n = int(input("Enter the minimum length of the sub-string: "))
+list1 = []
+for i in range(n,len(a)+1):
+    for j in range(len(a)+1-i):
+        list1.append(a[j:j+i])
+print(list1)
+count = len([i for i in list1 if '1' not in i])
+print(count)
