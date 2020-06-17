@@ -1,3 +1,5 @@
+# Hack the Interview IV (Asia Pacific)
+# Valid Binary String
 a = input("Enter a binary string: ")
 n = int(input("Enter the minimum length of the sub-string: "))
 list1 = []
