@@ -1,0 +1,15 @@
+# Hack the Interview IV (Asia Pacific)
+# Number of Integers Problem
+l = int(input("Enter the Lower Bound: "))
+r = int(input("Enter the Upper Bound: "))
+k = int(input("Enter the number non-zero numbers to be fund in that range: "))
+count = 0
+list1 = []
+for i in range(l+1,r+1):
+    str1 = str(i)
+    c1 = str1.count('0')
+    if len(str1)-c1 == k:
+        count += 1
+        list1.append(i)
+print(count)
+print(list1)
