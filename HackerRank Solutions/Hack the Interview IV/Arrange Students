@@ -1,0 +1,20 @@
+# Hack the Interview IV (Asia Pacific)
+# Arrange Students Problem
+list1 = sorted(list(map(int,input().split(","))))
+list2 = sorted(list(map(int,input().split(","))))
+list5 = []
+list6 = []
+list3 = list(zip(list1,list2))
+list4 = list(zip(list2,list1))
+for i in list3:
+    for j in range(2):
+        list5.append(i[j])
+
+for i in list4:
+    for j in range(2):
+        list6.append(i[j])
+
+if sorted(list1+list2) == list5 or sorted(list1+list2) == list6:
+    print("It's POSSIBLE to arrange them in non-decresing order with all the conditions full-filled.")
+else:
+    print("It's NOT POSSIBLE to arrange them in non-decresing order with all the conditions full-filled.")
