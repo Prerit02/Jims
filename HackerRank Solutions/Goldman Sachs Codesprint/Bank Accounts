@@ -1,0 +1,18 @@
+# Goldman Sachs Codesprint
+# Bank Accounts Problem
+n1 = int(input("Enter the number of repititions: "))
+b = 0
+list2 = []
+for i in range(n1):
+    n,k,x,d = map(int,input().split(" "))
+    list1 = list(map(int,input().split()))
+    b = 0
+    for j in range(len(list1)):
+        a = max(k,(x/100)*list1[j])
+        b += min(a,d)
+    if b>d:
+        list2.append("Upfront")
+    else:
+        list2.append("Fee")
+for i in list2:
+    print(i)
