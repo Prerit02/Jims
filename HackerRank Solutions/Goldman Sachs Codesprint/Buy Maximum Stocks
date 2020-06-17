@@ -1,0 +1,11 @@
+# Goldman Sachs Codesprint
+# Buy Maximum Stocks Problem
+n = int(input("Enter the number of days: "))
+list1 = list(map(int,input().split(" ")))
+k = int(input("Enter the initial amount with the customer: "))
+a = 0
+for i in list1:
+    if k>=i:
+        a += k//i
+        k = k%i
+print(a)
