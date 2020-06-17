@@ -1,0 +1,24 @@
+# Goldman Sachs Codesprint
+# Trader Profit Problem
+
+list_profits = []
+q = int(input("Enter the number of queries: "))
+for i in range(q):
+    listi = []
+    listj = []
+    listx = []
+    k = int(input("Enter the number of transactions: "))
+    n = int(input("Enter the number of days: "))
+    list1 = list(map(int,input().split(" ")))
+    for i in range(len(list1)-2):
+        for j in range(i+1,len(list1)):
+            listi.append(list1[i] - list1[0])
+            listj.append(list1[j] - list1[i+1])
+    for i in range(len(listi)-1):
+        for j in range(i+1,len(listj)):
+            listx.append(listi[i]+listj[j])
+    if max(listx)>0:
+        list_profits.append(max(listx))
+    else:
+        list_profits.append("No Profit Made as the stock prices are decresing day-by-day.")
+print(list_profits)
